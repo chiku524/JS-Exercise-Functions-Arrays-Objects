@@ -129,7 +129,7 @@ console.log(makePersonObject(3, 'Nico', 'chiku524@icloud.com'));
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(object) {
- return 'Hello, my name is ' + object.name;
+  return 'Hello, my name is ' + object.name;
 }
 let person = {name: 'Nico', age: 24, hobby: 'basketball'};
 console.log(getName(person));
@@ -149,9 +149,12 @@ console.log(getName(person));
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(array) {
+  return array.indexOf('apple');
 }
+
+let arr1 = ['orange', 'grape', 'apple', 'banana', 'mango'];
+console.log(appleIndex(arr1));
 
 /**
  * ### Challenge `isItAnApple`
@@ -168,11 +171,12 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(array) {
+  return array.map(x => x === 'apple' ? 'true' : 'false');
 }
 
-
+let arr2 = ['orange', 'apple', 'banana', 'apples', 'apple', 'mango'];
+console.log(isItAnApple(arr2));
 
 /*
 // ⭐️ Example Test Data ⭐️
