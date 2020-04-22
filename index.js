@@ -161,7 +161,18 @@ function appleIndex(array) {
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(array) {
-  return array.map(x => x === 'apple' ? true : false);
+  let newarr = [];
+  for(var i in array){
+    if(array[i] === 'apple'){
+      array[i] = true
+      newarr.push(array[i]);
+    }
+    else {
+      array[i] = false;
+      newarr.push(array[i]);
+    }
+  }
+  return newarr;
 }
 
 
@@ -233,8 +244,8 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(array) {
-  let x = array.slice(-1);
-  return 'This is a ' + x[0].car_make + ' ' + x[0].car_model;
+  let x = array[array.length-1];
+  return 'This is a ' + x.car_make + ' ' + x.car_model;
 }
 
 /**
